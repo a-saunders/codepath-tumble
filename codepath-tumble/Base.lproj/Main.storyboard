@@ -135,11 +135,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-<<<<<<< HEAD
                         <segue destination="6ge-gV-9hF" kind="modal" identifier="userSegue" id="Ejr-pd-TlW"/>
-=======
                         <segue destination="htP-rQ-zi0" kind="modal" identifier="firstSegue" id="OzX-6f-OAf"/>
->>>>>>> master
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mH4-HP-fTw" userLabel="First Responder" sceneMemberID="firstResponder"/>
