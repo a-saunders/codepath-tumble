@@ -22,6 +22,7 @@
 		A43FC1A91D10C6A300B4C6F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A43FC1A71D10C6A300B4C6F4 /* LaunchScreen.storyboard */; };
 		A43FC1B41D10C6A300B4C6F4 /* codepath_tumbleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43FC1B31D10C6A300B4C6F4 /* codepath_tumbleTests.swift */; };
 		A43FC1BF1D10C6A300B4C6F4 /* codepath_tumbleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43FC1BE1D10C6A300B4C6F4 /* codepath_tumbleUITests.swift */; };
+		A48D687F1D1B3AEB002A05BF /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D687E1D1B3AEB002A05BF /* Users.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		A43FC1BA1D10C6A300B4C6F4 /* codepath-tumbleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "codepath-tumbleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A43FC1BE1D10C6A300B4C6F4 /* codepath_tumbleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = codepath_tumbleUITests.swift; sourceTree = "<group>"; };
 		A43FC1C01D10C6A300B4C6F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A48D687E1D1B3AEB002A05BF /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 			children = (
 				A43FC19E1D10C6A300B4C6F4 /* AppDelegate.swift */,
 				A43FC1A01D10C6A300B4C6F4 /* ViewController.swift */,
+				A48D687E1D1B3AEB002A05BF /* Users.swift */,
 				A43FC1A21D10C6A300B4C6F4 /* Main.storyboard */,
 				9F0685F41D1B4D470008AEFA /* NewViewController.swift */,
 				9F65E0F31D1B08CD00C5E29D /* ProfileViewController.swift */,
@@ -291,6 +294,7 @@
 				9F65E0EC1D1B084900C5E29D /* MatchesViewController.swift in Sources */,
 				9F65E0F41D1B08CD00C5E29D /* ProfileViewController.swift in Sources */,
 				9F0685F51D1B4D470008AEFA /* NewViewController.swift in Sources */,
+				A48D687F1D1B3AEB002A05BF /* Users.swift in Sources */,
 				A43FC19F1D10C6A300B4C6F4 /* AppDelegate.swift in Sources */,
 				9F65E0EA1D1B082D00C5E29D /* SwipeViewController.swift in Sources */,
 			);
