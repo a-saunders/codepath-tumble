@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F0685F51D1B4D470008AEFA /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0685F41D1B4D470008AEFA /* NewViewController.swift */; };
+		9F65E0E81D1B07FB00C5E29D /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F65E0E71D1B07FB00C5E29D /* UserViewController.swift */; };
+		9F65E0EA1D1B082D00C5E29D /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F65E0E91D1B082D00C5E29D /* SwipeViewController.swift */; };
+		9F65E0EC1D1B084900C5E29D /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F65E0EB1D1B084900C5E29D /* MatchesViewController.swift */; };
+		9F65E0EE1D1B086400C5E29D /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F65E0ED1D1B086400C5E29D /* MessagesViewController.swift */; };
+		9F65E0F01D1B089600C5E29D /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F65E0EF1D1B089600C5E29D /* DateViewController.swift */; };
+		9F65E0F21D1B08AE00C5E29D /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F65E0F11D1B08AE00C5E29D /* StartViewController.swift */; };
+		9F65E0F41D1B08CD00C5E29D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F65E0F31D1B08CD00C5E29D /* ProfileViewController.swift */; };
 		A43FC19F1D10C6A300B4C6F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43FC19E1D10C6A300B4C6F4 /* AppDelegate.swift */; };
 		A43FC1A11D10C6A300B4C6F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43FC1A01D10C6A300B4C6F4 /* ViewController.swift */; };
 		A43FC1A41D10C6A300B4C6F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A43FC1A21D10C6A300B4C6F4 /* Main.storyboard */; };
@@ -34,6 +42,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F0685F41D1B4D470008AEFA /* NewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
+		9F65E0E71D1B07FB00C5E29D /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		9F65E0E91D1B082D00C5E29D /* SwipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
+		9F65E0EB1D1B084900C5E29D /* MatchesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
+		9F65E0ED1D1B086400C5E29D /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		9F65E0EF1D1B089600C5E29D /* DateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
+		9F65E0F11D1B08AE00C5E29D /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		9F65E0F31D1B08CD00C5E29D /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A43FC19B1D10C6A300B4C6F4 /* codepath-tumble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "codepath-tumble.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A43FC19E1D10C6A300B4C6F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A43FC1A01D10C6A300B4C6F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +116,14 @@
 				A43FC19E1D10C6A300B4C6F4 /* AppDelegate.swift */,
 				A43FC1A01D10C6A300B4C6F4 /* ViewController.swift */,
 				A43FC1A21D10C6A300B4C6F4 /* Main.storyboard */,
+				9F0685F41D1B4D470008AEFA /* NewViewController.swift */,
+				9F65E0F31D1B08CD00C5E29D /* ProfileViewController.swift */,
+				9F65E0F11D1B08AE00C5E29D /* StartViewController.swift */,
+				9F65E0EF1D1B089600C5E29D /* DateViewController.swift */,
+				9F65E0ED1D1B086400C5E29D /* MessagesViewController.swift */,
+				9F65E0EB1D1B084900C5E29D /* MatchesViewController.swift */,
+				9F65E0E91D1B082D00C5E29D /* SwipeViewController.swift */,
+				9F65E0E71D1B07FB00C5E29D /* UserViewController.swift */,
 				A43FC1A51D10C6A300B4C6F4 /* Assets.xcassets */,
 				A43FC1A71D10C6A300B4C6F4 /* LaunchScreen.storyboard */,
 				A43FC1AA1D10C6A300B4C6F4 /* Info.plist */,
@@ -259,8 +283,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F65E0EE1D1B086400C5E29D /* MessagesViewController.swift in Sources */,
+				9F65E0F21D1B08AE00C5E29D /* StartViewController.swift in Sources */,
 				A43FC1A11D10C6A300B4C6F4 /* ViewController.swift in Sources */,
+				9F65E0F01D1B089600C5E29D /* DateViewController.swift in Sources */,
+				9F65E0E81D1B07FB00C5E29D /* UserViewController.swift in Sources */,
+				9F65E0EC1D1B084900C5E29D /* MatchesViewController.swift in Sources */,
+				9F65E0F41D1B08CD00C5E29D /* ProfileViewController.swift in Sources */,
+				9F0685F51D1B4D470008AEFA /* NewViewController.swift in Sources */,
 				A43FC19F1D10C6A300B4C6F4 /* AppDelegate.swift in Sources */,
+				9F65E0EA1D1B082D00C5E29D /* SwipeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +517,7 @@
 				A43FC1C51D10C6A300B4C6F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A43FC1C61D10C6A300B4C6F4 /* Build configuration list for PBXNativeTarget "codepath-tumbleTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +526,7 @@
 				A43FC1C81D10C6A300B4C6F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A43FC1C91D10C6A300B4C6F4 /* Build configuration list for PBXNativeTarget "codepath-tumbleUITests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +535,7 @@
 				A43FC1CB1D10C6A300B4C6F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
