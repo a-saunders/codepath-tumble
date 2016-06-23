@@ -38,15 +38,28 @@ class SwipeViewController: UIViewController {
             cardView.center.x = cardInitialCenter.x + translation.x
             cardView.center.y = cardInitialCenter.y + translation.y
             
-            if translation.x > 0 {
+            //If card is swiped to the right and above image center
+            if translation.x > 0 && (point.y) < cardInitialCenter.y {
                 UIView.animateWithDuration(0.2, animations: {
-                    self.cardView.transform = CGAffineTransformMakeRotation(CGFloat(11.25 * M_PI / 180))
+                    self.cardView.transform = CGAffineTransformMakeRotation(translation.x * 11.25 / 160 * CGFloat(M_PI / 180))
                 })
-            }
                 
-            else if translation.x < 0 {
+            //If card is swiped to the right and below image center
+            } else if translation.x > 0 && (point.y) > cardInitialCenter.y {
                 UIView.animateWithDuration(0.2, animations: {
-                    self.cardView.transform = CGAffineTransformMakeRotation(CGFloat(-11.25 * M_PI / 180))
+                    self.cardView.transform = CGAffineTransformMakeRotation(translation.x * -11.25 / 160 * CGFloat(M_PI / 180))
+                })
+                
+            //If card is swiped to the left and above image center
+            } else if translation.x < 0 && (point.y) < cardInitialCenter.y {
+                UIView.animateWithDuration(0.2, animations: {
+                    self.cardView.transform = CGAffineTransformMakeRotation(translation.x * 11.25 / 160 * CGFloat(M_PI / 180))
+                })
+                
+            //If card is swiped to the left and below image center
+            } else if translation.x < 0 && (point.y) > cardInitialCenter.y {
+                UIView.animateWithDuration(0.2, animations: {
+                    self.cardView.transform = CGAffineTransformMakeRotation(translation.x * -11.25 / 160 * CGFloat(M_PI / 180))
                 })
             }
             
