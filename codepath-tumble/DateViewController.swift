@@ -10,8 +10,12 @@ import UIKit
 
 class DateViewController: UIViewController {
 
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        scrollView.contentSize = CGSize(width: 320, height: 790)
 
         // Do any additional setup after loading the view.
     }
@@ -25,6 +29,13 @@ class DateViewController: UIViewController {
     @IBAction func onBack(sender: AnyObject) {
         navigationController!.popViewControllerAnimated(true)
     }
+    
+    @IBAction func didTapAccept(sender: AnyObject) {
+    }
+    
+    @IBAction func didTapNoThanks(sender: AnyObject) {
+    }
+    
     /*
     // MARK: - Navigation
 
