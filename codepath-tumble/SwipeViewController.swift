@@ -13,6 +13,7 @@ class SwipeViewController: UIViewController {
     @IBOutlet weak var cardView: UIView!
     @IBOutlet var cardPanRecognizer: UIPanGestureRecognizer!
     @IBOutlet weak var imageView: UIScrollView!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     var cardInitialCenter: CGPoint!
 
@@ -20,7 +21,9 @@ class SwipeViewController: UIViewController {
 
     @IBAction func didPanCard(sender: UIPanGestureRecognizer) {
         
+        
         // Absolute (x,y) coordinates in card view
+        
         var point = cardPanRecognizer.locationInView(view)
         
         // Relative change in (x,y) coordinates from where gesture began.
@@ -29,6 +32,8 @@ class SwipeViewController: UIViewController {
         
         
         if sender.state == UIGestureRecognizerState.Began {
+            
+
             cardInitialCenter = cardView.center
 
             
@@ -92,13 +97,19 @@ class SwipeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
+        
+        scrollView.contentSize = CGSize(width:288, height:2000)
+
+
 
         cardView.layer.borderWidth = 1
         cardView.layer.borderColor = UIColor(red: 225/255, green: 225/255, blue: 225/255, alpha: 1).CGColor
         cardView.layer.cornerRadius = 8;
         cardView.layer.masksToBounds = true;
         
-        imageView.layer.cornerRadius = 5;
+        scrollView.layer.cornerRadius = 5;
 
        
 

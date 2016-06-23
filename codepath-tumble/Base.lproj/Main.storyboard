@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="qaZ-nw-CVg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1808" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="qaZ-nw-CVg">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -240,14 +240,13 @@
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="qPZ-xh-VO5">
-                                        <rect key="frame" x="8" y="9" width="287" height="365"/>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" id="X1r-om-Wxu">
+                                        <rect key="frame" x="8" y="8" width="287" height="378"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="dude" id="S0S-6y-gMY">
-                                                <rect key="frame" x="-23" y="-43" width="320" height="468"/>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="imagescroll" id="xtR-jC-io7">
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="2489"/>
                                                 <autoresizingMask key="autoresizingMask"/>
-                                                <gestureRecognizers/>
                                             </imageView>
                                         </subviews>
                                     </scrollView>
@@ -265,7 +264,7 @@
                     <connections>
                         <outlet property="cardPanRecognizer" destination="hlV-BS-2La" id="kDy-mJ-IQg"/>
                         <outlet property="cardView" destination="S7p-yJ-K6r" id="MYG-ua-CkT"/>
-                        <outlet property="imageView" destination="qPZ-xh-VO5" id="rwm-GZ-HmL"/>
+                        <outlet property="scrollView" destination="X1r-om-Wxu" id="YeG-Rv-qf1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mH4-HP-fTw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -285,26 +284,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="2000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="ldM-LU-Rdi" userLabel="Image 1">
-                                <rect key="frame" x="17" y="77" width="287" height="365"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Niv-fI-sSS">
+                                <rect key="frame" x="16" y="33" width="287" height="1720"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" id="fGE-ZC-XYm" userLabel="Image 2">
-                                <rect key="frame" x="17" y="441" width="287" height="365"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" id="PKF-7y-UH2" userLabel="Image 3">
-                                <rect key="frame" x="17" y="806" width="287" height="365"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" id="S0A-84-80q" userLabel="Image 4">
-                                <rect key="frame" x="17" y="1170" width="287" height="365"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="ldM-LU-Rdi" userLabel="Image 1">
+                                        <rect key="frame" x="0.0" y="0.0" width="287" height="365"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="fGE-ZC-XYm" userLabel="Image 2">
+                                        <rect key="frame" x="0.0" y="365" width="287" height="365"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="S0A-84-80q" userLabel="Image 4">
+                                        <rect key="frame" x="0.0" y="678" width="287" height="365"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="PKF-7y-UH2" userLabel="Image 3">
+                                        <rect key="frame" x="0.0" y="1043" width="287" height="365"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -491,8 +496,8 @@
         <image name="date-details" width="320" height="663"/>
         <image name="date-footer" width="320" height="62"/>
         <image name="dates" width="320" height="568"/>
-        <image name="dude" width="320" height="468"/>
         <image name="empty-message" width="205" height="153"/>
+        <image name="imagescroll" width="612" height="2920"/>
         <image name="match" width="320" height="568"/>
         <image name="matches" width="320" height="622"/>
         <image name="matches_avatars" width="355" height="98"/>
