@@ -53,7 +53,7 @@ class MessagesViewController: UIViewController {
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
         // If the scrollView has been scrolled down by 50px or more...
-        if scrollView.contentOffset.y >= -20 {
+        if scrollView.contentOffset.y >= 20 {
             // Hide the keyboard
             view.endEditing(true)
             UIView.animateWithDuration(0.35) { () -> Void in
@@ -74,6 +74,9 @@ class MessagesViewController: UIViewController {
         navigationController!.popViewControllerAnimated(true)
     }
 
+    @IBAction func didTapSend(sender: AnyObject) {
+    }
+    
     /*
     // MARK: - Navigation
 
