@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="qaZ-nw-CVg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1808" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="qaZ-nw-CVg">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -167,7 +167,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ypv-wK-NYj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="936" y="1581"/>
+            <point key="canvasLocation" x="1490" y="1843"/>
         </scene>
         <!--New View Controller-->
         <scene sceneID="uOj-lM-7BB">
@@ -187,7 +187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tPe-2t-Zty" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1416" y="1801"/>
+            <point key="canvasLocation" x="1940" y="1843"/>
         </scene>
         <!--Swipe View Controller-->
         <scene sceneID="6gp-cx-2sy">
@@ -216,35 +216,41 @@
                                 </connections>
                             </button>
                             <view clipsSubviews="YES" contentMode="scaleToFill" id="S7p-yJ-K6r">
-                                <rect key="frame" x="9" y="72" width="303" height="483"/>
+                                <rect key="frame" x="9" y="64" width="303" height="496"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Gwa-6w-H5e">
-                                        <rect key="frame" x="8" y="8" width="287" height="365"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <gestureRecognizers/>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name, Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aaC-Xv-V7I">
-                                        <rect key="frame" x="22" y="386" width="287" height="30"/>
+                                        <rect key="frame" x="22" y="394" width="287" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Occupation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mZd-A9-AeW">
-                                        <rect key="frame" x="22" y="412" width="287" height="30"/>
+                                        <rect key="frame" x="22" y="420" width="287" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Education" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3Xo-W5-iRN">
-                                        <rect key="frame" x="22" y="438" width="287" height="30"/>
+                                        <rect key="frame" x="22" y="446" width="287" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="qPZ-xh-VO5">
+                                        <rect key="frame" x="8" y="9" width="287" height="365"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="dude" id="S0S-6y-gMY">
+                                                <rect key="frame" x="-23" y="-43" width="320" height="468"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <gestureRecognizers/>
+                                            </imageView>
+                                        </subviews>
+                                    </scrollView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
@@ -257,13 +263,57 @@
                     </view>
                     <navigationItem key="navigationItem" id="iKi-fK-9ym"/>
                     <connections>
+                        <outlet property="cardPanRecognizer" destination="hlV-BS-2La" id="kDy-mJ-IQg"/>
                         <outlet property="cardView" destination="S7p-yJ-K6r" id="MYG-ua-CkT"/>
+                        <outlet property="imageView" destination="qPZ-xh-VO5" id="rwm-GZ-HmL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mH4-HP-fTw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="hlV-BS-2La"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="hlV-BS-2La" userLabel="cardPan">
+                    <connections>
+                        <action selector="didPanCard:" destination="9Qg-bd-gXP" id="jOP-z0-kXG"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="894" y="373"/>
+        </scene>
+        <!--Card Image View Controller-->
+        <scene sceneID="X79-dY-nK7">
+            <objects>
+                <viewController id="Hyl-Mk-Asn" customClass="cardImageViewController" customModule="codepath_tumble" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="em1-Rk-HhG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="2000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="ldM-LU-Rdi" userLabel="Image 1">
+                                <rect key="frame" x="17" y="77" width="287" height="365"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="fGE-ZC-XYm" userLabel="Image 2">
+                                <rect key="frame" x="17" y="441" width="287" height="365"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="PKF-7y-UH2" userLabel="Image 3">
+                                <rect key="frame" x="17" y="806" width="287" height="365"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="S0A-84-80q" userLabel="Image 4">
+                                <rect key="frame" x="17" y="1170" width="287" height="365"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="2000"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rJm-R1-unC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="894" y="1830"/>
         </scene>
         <!--Matches View Controller-->
         <scene sceneID="Az7-fF-QKt">
@@ -409,6 +459,7 @@
     <resources>
         <image name="date-details" width="320" height="663"/>
         <image name="date-footer" width="320" height="62"/>
+        <image name="dude" width="320" height="468"/>
         <image name="empty-message" width="205" height="153"/>
         <image name="match" width="320" height="568"/>
         <image name="matches" width="320" height="622"/>
