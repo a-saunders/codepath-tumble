@@ -20,17 +20,14 @@ class SwipeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        scrollView.contentSize = CGSize(width: 288, height: 2000)
+        
         cardView.layer.borderWidth = 1
         cardView.layer.borderColor = UIColor(red: 225/255, green: 225/255, blue: 225/255, alpha: 1).CGColor
         cardView.layer.cornerRadius = 4;
         cardView.layer.masksToBounds = true;
         
-        imageView.layer.cornerRadius = 2;
-        
-        cardView.layer.shadowColor = UIColor.blackColor().CGColor
-        cardView.layer.shadowOpacity = 1
-        cardView.layer.shadowOffset = CGSizeZero
-        cardView.layer.shadowRadius = 10
+        scrollView.layer.cornerRadius = 2;
         
         // Do any additional setup after loading the view.
     }
