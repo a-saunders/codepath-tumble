@@ -96,6 +96,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F888B8F1D1C8852008F6BB1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9F65E0E71D1B07FB00C5E29D /* UserViewController.swift */,
+				9F65E0E91D1B082D00C5E29D /* SwipeViewController.swift */,
+				88E234EA1D1C7501009CBECF /* cardImageViewController.swift */,
+				9F65E0EB1D1B084900C5E29D /* MatchesViewController.swift */,
+				9F0685F41D1B4D470008AEFA /* NewViewController.swift */,
+				9F65E0F11D1B08AE00C5E29D /* StartViewController.swift */,
+				9F65E0EF1D1B089600C5E29D /* DateViewController.swift */,
+				9F65E0ED1D1B086400C5E29D /* MessagesViewController.swift */,
+				9F5D32D51D1C847C00990153 /* CalendarViewController.swift */,
+				9F65E0F31D1B08CD00C5E29D /* ProfileViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		A43FC1921D10C6A300B4C6F4 = {
 			isa = PBXGroup;
 			children = (
@@ -119,20 +136,11 @@
 		A43FC19D1D10C6A300B4C6F4 /* codepath-tumble */ = {
 			isa = PBXGroup;
 			children = (
+				9F888B8F1D1C8852008F6BB1 /* ViewControllers */,
 				A43FC19E1D10C6A300B4C6F4 /* AppDelegate.swift */,
 				A43FC1A01D10C6A300B4C6F4 /* ViewController.swift */,
-				88E234EA1D1C7501009CBECF /* cardImageViewController.swift */,
 				A48D687E1D1B3AEB002A05BF /* Users.swift */,
 				A43FC1A21D10C6A300B4C6F4 /* Main.storyboard */,
-				9F5D32D51D1C847C00990153 /* CalendarViewController.swift */,
-				9F0685F41D1B4D470008AEFA /* NewViewController.swift */,
-				9F65E0F31D1B08CD00C5E29D /* ProfileViewController.swift */,
-				9F65E0F11D1B08AE00C5E29D /* StartViewController.swift */,
-				9F65E0EF1D1B089600C5E29D /* DateViewController.swift */,
-				9F65E0ED1D1B086400C5E29D /* MessagesViewController.swift */,
-				9F65E0EB1D1B084900C5E29D /* MatchesViewController.swift */,
-				9F65E0E91D1B082D00C5E29D /* SwipeViewController.swift */,
-				9F65E0E71D1B07FB00C5E29D /* UserViewController.swift */,
 				A43FC1A51D10C6A300B4C6F4 /* Assets.xcassets */,
 				A43FC1A71D10C6A300B4C6F4 /* LaunchScreen.storyboard */,
 				A43FC1AA1D10C6A300B4C6F4 /* Info.plist */,
