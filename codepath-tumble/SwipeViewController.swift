@@ -16,7 +16,23 @@ class SwipeViewController: UIViewController {
     
     var cardInitialCenter: CGPoint!
 
-
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        cardView.layer.borderWidth = 1
+        cardView.layer.borderColor = UIColor(red: 225/255, green: 225/255, blue: 225/255, alpha: 1).CGColor
+        cardView.layer.cornerRadius = 4;
+        cardView.layer.masksToBounds = true;
+        
+        imageView.layer.cornerRadius = 2;
+        
+        // Do any additional setup after loading the view.
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
 
     @IBAction func didPanCard(sender: UIPanGestureRecognizer) {
         
@@ -76,39 +92,17 @@ class SwipeViewController: UIViewController {
                     
                 } else if translation.x > 100 {
                     UIView.animateWithDuration(0.4, animations: {
-                        self.cardView.transform = CGAffineTransformMakeTranslation(400,0)
+                        self.cardView.transform = CGAffineTransformMakeTranslation(250,0)
                     })
                     
                 }
                     
                 else if translation.x < 100 {
                     UIView.animateWithDuration(0.4, animations: {
-                        self.cardView.transform = CGAffineTransformMakeTranslation(-400,0)
+                        self.cardView.transform = CGAffineTransformMakeTranslation(-250,0)
                     })
                 }
         }
-    }
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        cardView.layer.borderWidth = 1
-        cardView.layer.borderColor = UIColor(red: 225/255, green: 225/255, blue: 225/255, alpha: 1).CGColor
-        cardView.layer.cornerRadius = 8;
-        cardView.layer.masksToBounds = true;
-        
-        imageView.layer.cornerRadius = 5;
-
-       
-
-        
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     
