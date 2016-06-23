@@ -18,7 +18,7 @@ class SwipeViewController: UIViewController {
 
         cardView.layer.borderWidth = 1
         cardView.layer.borderColor = UIColor(red: 225/255, green: 225/255, blue: 225/255, alpha: 1).CGColor
-        cardView.layer.cornerRadius = 10;
+        cardView.layer.cornerRadius = 8;
         cardView.layer.masksToBounds = true;
 
         
