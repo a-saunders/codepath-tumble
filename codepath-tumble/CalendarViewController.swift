@@ -1,17 +1,14 @@
 //
-//  StartViewController.swift
+//  CalendarViewController.swift
 //  codepath-tumble
 //
-//  Created by Alexandra Saunders on 6/22/16.
+//  Created by Alexandra Saunders on 6/23/16.
 //  Copyright © 2016 red58 Communications. All rights reserved.
 //
 
 import UIKit
 
-class StartViewController: UIViewController {
-    
-    var cardInitialCenter: CGPoint!
-
+class CalendarViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +21,9 @@ class StartViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func onBack(sender: AnyObject) {
+        navigationController!.popViewControllerAnimated(true)
+    }
 
     /*
     // MARK: - Navigation

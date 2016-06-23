@@ -1,17 +1,14 @@
 //
-//  StartViewController.swift
+//  cardImageViewController.swift
 //  codepath-tumble
 //
-//  Created by Alexandra Saunders on 6/22/16.
+//  Created by Stephen Davis on 6/23/16.
 //  Copyright © 2016 red58 Communications. All rights reserved.
 //
 
 import UIKit
 
-class StartViewController: UIViewController {
-    
-    var cardInitialCenter: CGPoint!
-
+class cardImageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
