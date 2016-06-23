@@ -27,6 +27,11 @@ class SwipeViewController: UIViewController {
 
         imageView.layer.cornerRadius = 2;
 
+        cardView.layer.shadowColor = UIColor.blackColor().CGColor
+        cardView.layer.shadowOpacity = 1
+        cardView.layer.shadowOffset = CGSizeZero
+        cardView.layer.shadowRadius = 10
+
         // Do any additional setup after loading the view.
     }
 
@@ -109,7 +114,7 @@ class SwipeViewController: UIViewController {
                 }
         }
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
