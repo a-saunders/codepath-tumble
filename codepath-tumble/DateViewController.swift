@@ -29,6 +29,13 @@ class DateViewController: UIViewController {
     @IBAction func onBack(sender: AnyObject) {
         navigationController!.popViewControllerAnimated(true)
     }
+    
+    @IBAction func didTapAccept(sender: AnyObject) {
+    }
+    
+    @IBAction func didTapNoThanks(sender: AnyObject) {
+    }
+    
     /*
     // MARK: - Navigation
 
