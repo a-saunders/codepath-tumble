@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88E234EB1D1C7501009CBECF /* cardImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E234EA1D1C7501009CBECF /* cardImageViewController.swift */; };
 		9F0685F51D1B4D470008AEFA /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0685F41D1B4D470008AEFA /* NewViewController.swift */; };
 		9F65E0E81D1B07FB00C5E29D /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F65E0E71D1B07FB00C5E29D /* UserViewController.swift */; };
 		9F65E0EA1D1B082D00C5E29D /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F65E0E91D1B082D00C5E29D /* SwipeViewController.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		88E234EA1D1C7501009CBECF /* cardImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cardImageViewController.swift; sourceTree = "<group>"; };
 		9F0685F41D1B4D470008AEFA /* NewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		9F65E0E71D1B07FB00C5E29D /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		9F65E0E91D1B082D00C5E29D /* SwipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			children = (
 				A43FC19E1D10C6A300B4C6F4 /* AppDelegate.swift */,
 				A43FC1A01D10C6A300B4C6F4 /* ViewController.swift */,
+				88E234EA1D1C7501009CBECF /* cardImageViewController.swift */,
 				A48D687E1D1B3AEB002A05BF /* Users.swift */,
 				A43FC1A21D10C6A300B4C6F4 /* Main.storyboard */,
 				9F0685F41D1B4D470008AEFA /* NewViewController.swift */,
@@ -294,6 +297,7 @@
 				9F65E0EC1D1B084900C5E29D /* MatchesViewController.swift in Sources */,
 				9F65E0F41D1B08CD00C5E29D /* ProfileViewController.swift in Sources */,
 				9F0685F51D1B4D470008AEFA /* NewViewController.swift in Sources */,
+				88E234EB1D1C7501009CBECF /* cardImageViewController.swift in Sources */,
 				A48D687F1D1B3AEB002A05BF /* Users.swift in Sources */,
 				A43FC19F1D10C6A300B4C6F4 /* AppDelegate.swift in Sources */,
 				9F65E0EA1D1B082D00C5E29D /* SwipeViewController.swift in Sources */,
