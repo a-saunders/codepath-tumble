@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88AF5CC71D1CB47F005D6ADB /* DateStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88AF5CC61D1CB47F005D6ADB /* DateStoryboard.storyboard */; };
 		88E234EB1D1C7501009CBECF /* cardImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E234EA1D1C7501009CBECF /* cardImageViewController.swift */; };
 		9F0685F51D1B4D470008AEFA /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0685F41D1B4D470008AEFA /* NewViewController.swift */; };
 		9F5D32D61D1C847C00990153 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5D32D51D1C847C00990153 /* CalendarViewController.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		88AF5CC61D1CB47F005D6ADB /* DateStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DateStoryboard.storyboard; sourceTree = "<group>"; };
 		88E234EA1D1C7501009CBECF /* cardImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cardImageViewController.swift; sourceTree = "<group>"; };
 		9F0685F41D1B4D470008AEFA /* NewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		9F5D32D51D1C847C00990153 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				A43FC1A51D10C6A300B4C6F4 /* Assets.xcassets */,
 				A43FC1A71D10C6A300B4C6F4 /* LaunchScreen.storyboard */,
 				A43FC1AA1D10C6A300B4C6F4 /* Info.plist */,
+				88AF5CC61D1CB47F005D6ADB /* DateStoryboard.storyboard */,
 			);
 			path = "codepath-tumble";
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				A43FC1A91D10C6A300B4C6F4 /* LaunchScreen.storyboard in Resources */,
 				A43FC1A61D10C6A300B4C6F4 /* Assets.xcassets in Resources */,
 				A43FC1A41D10C6A300B4C6F4 /* Main.storyboard in Resources */,
+				88AF5CC71D1CB47F005D6ADB /* DateStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
