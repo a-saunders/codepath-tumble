@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SwipeViewController: UIViewController {
+class SwipeViewController: UIViewController, UIGestureRecognizerDelegate {
     
     @IBOutlet weak var cardView: UIView!
     @IBOutlet var cardPanRecognizer: UIPanGestureRecognizer!
@@ -16,6 +16,8 @@ class SwipeViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     
     var cardInitialCenter: CGPoint!
+    
+    @IBOutlet var panGestureRecognizer: UIPanGestureRecognizer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +31,29 @@ class SwipeViewController: UIViewController {
         
         scrollView.layer.cornerRadius = 2;
         
+        panGestureRecognizer.delegate = self
+        
         // Do any additional setup after loading the view.
+    }
+    
+    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldBeRequiredToFailByGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
+    
+    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
+    
+    func gestureRecognizerShouldBegin(gestureRecognizer: UIGestureRecognizer) -> Bool {
+        let panGestureRecognizer = gestureRecognizer as! UIPanGestureRecognizer
+        
+        let velocity = panGestureRecognizer.velocityInView(view)
+        
+        if abs(velocity.x) > abs(velocity.y) {
+            return true
+        } else {
+            return false
+        }
     }
     
     override func didReceiveMemoryWarning() {

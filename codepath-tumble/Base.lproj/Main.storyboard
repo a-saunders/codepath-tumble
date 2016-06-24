@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="qaZ-nw-CVg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1808" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="qaZ-nw-CVg">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -79,9 +79,6 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OuV-zG-Mho">
                                         <rect key="frame" x="10" y="68" width="299" height="78"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <connections>
-                                            <segue destination="VgO-Cw-Yav" kind="push" id="iOX-w9-m0p"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <gestureRecognizers/>
@@ -223,7 +220,7 @@
                                         <rect key="frame" x="22" y="394" width="287" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Occupation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mZd-A9-AeW">
@@ -264,6 +261,7 @@
                     <connections>
                         <outlet property="cardPanRecognizer" destination="hlV-BS-2La" id="kDy-mJ-IQg"/>
                         <outlet property="cardView" destination="S7p-yJ-K6r" id="MYG-ua-CkT"/>
+                        <outlet property="panGestureRecognizer" destination="hlV-BS-2La" id="5qq-N2-1ci"/>
                         <outlet property="scrollView" destination="X1r-om-Wxu" id="YeG-Rv-qf1"/>
                     </connections>
                 </viewController>
