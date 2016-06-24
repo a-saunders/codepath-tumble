@@ -12,10 +12,14 @@ class ImageGalleryViewController: UIViewController {
 
     @IBOutlet weak var imageLoaded: UIImageView!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var backButton: UIButton!
     
     var image: UIImage!
     
 
+    @IBAction func dismissButton(sender: UIButton) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
