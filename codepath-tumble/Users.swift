@@ -16,7 +16,9 @@ var users: [[String:Any]] = [
         "job": "QA engineer at Instamotor",
         "education": "Oregon State University, 2015",
         "location": "San Mateo",
-        "distance": "1.4 miles"
+        "distance": "1.4 miles",
+        "swipedRight": false,
+        "isMatch": false
     ],
     [
         "name": "Bram",
@@ -25,7 +27,9 @@ var users: [[String:Any]] = [
         "job": "Sales Director at Periscope",
         "education": "Stanford, 2013",
         "location": "San Francisco",
-        "distance": "13.2 miles"
+        "distance": "13.2 miles",
+        "swipedRight": false,
+        "isMatch": false
     ],
     [
         "name": "Cale",
@@ -34,7 +38,9 @@ var users: [[String:Any]] = [
         "job": "Barista",
         "education": "San Francisco State University, 2017",
         "location": "Palo Alto",
-        "distance": "26.2 miles"
+        "distance": "26.2 miles",
+        "swipedRight": false,
+        "isMatch": false
     ],
     [
         "name": "Chandler",
@@ -43,7 +49,9 @@ var users: [[String:Any]] = [
         "job": "Marketing Associate at Mindie",
         "education": "Queens College",
         "location": "San Francisco",
-        "distance": "14.6 miles"
+        "distance": "14.6 miles",
+        "swipedRight": false,
+        "isMatch": false
     ],
     [
         "name": "Chris",
@@ -52,7 +60,9 @@ var users: [[String:Any]] = [
         "job": "VP, Sales at PicnicHealth",
         "education": "Stanford, 2010",
         "location": "San Francisco",
-        "distance": "13.3 miles"
+        "distance": "13.3 miles",
+        "swipedRight": false,
+        "isMatch": false
     ],
     [
         "name": "Christophe",
@@ -61,7 +71,9 @@ var users: [[String:Any]] = [
         "job": "UX Designer at Slack",
         "education": "Academy of Art College, 2014",
         "location": "San Francisco",
-        "distance": "13.6 miles"
+        "distance": "13.6 miles",
+        "swipedRight": false,
+        "isMatch": false
     ],
     [
         "name": "Dan",
@@ -70,7 +82,9 @@ var users: [[String:Any]] = [
         "job": "CTO at Clearbit",
         "education": "Stanford, 2012",
         "location": "San Francisco",
-        "distance": "14.3 miles"
+        "distance": "14.3 miles",
+        "swipedRight": false,
+        "isMatch": false
     ],
     [
         "name": "Daniel",
@@ -79,7 +93,9 @@ var users: [[String:Any]] = [
         "job": "UX Designer",
         "education": "Appalachian State, 2009",
         "location": "Burlingame",
-        "distance": "7.7 miles"
+        "distance": "7.7 miles",
+        "swipedRight": false,
+        "isMatch": false
     ],
     [
         "name": "Felipe",
@@ -88,7 +104,9 @@ var users: [[String:Any]] = [
         "job": "Digital Marketing Manager at Kickpay",
         "education": "Leeds University",
         "location": "San Francisco",
-        "distance": "12.1 miles"
+        "distance": "12.1 miles",
+        "swipedRight": false,
+        "isMatch": false
     ],
     [
         "name": "Himan",
@@ -97,7 +115,9 @@ var users: [[String:Any]] = [
         "job": "Principal Engineer, Java",
         "education": "Berkeley, 2009",
         "location": "Millbrae",
-        "distance": "4.8 miles"
+        "distance": "4.8 miles",
+        "swipedRight": false,
+        "isMatch": false
     ],
     [
         "name": "James",
@@ -106,7 +126,9 @@ var users: [[String:Any]] = [
         "job": "Content Manager at Blockboard",
         "education": "George Washington HS, 2011",
         "location": "Daly City",
-        "distance": "5.8 miles"
+        "distance": "5.8 miles",
+        "swipedRight": false,
+        "isMatch": false
     ],
     [
         "name": "John",
@@ -115,7 +137,9 @@ var users: [[String:Any]] = [
         "job": "Front End Web Developer",
         "education": "Washington University, 2014",
         "location": "",
-        "distance": ""
+        "distance": "",
+        "swipedRight": false,
+        "isMatch": false
     ],
     [
         "name": "Junaid",
@@ -124,7 +148,9 @@ var users: [[String:Any]] = [
         "job": "CTO at Blockboard",
         "education": "UCLA, 2010",
         "location": "San Francisco",
-        "distance": "13.1 miles"
+        "distance": "13.1 miles",
+        "swipedRight": false,
+        "isMatch": false
     ],
     [
         "name": "Justin",
@@ -133,7 +159,9 @@ var users: [[String:Any]] = [
         "job": "Growth Hacker at Udemy",
         "education": "Chico State, 2004",
         "location": "San Francisco",
-        "distance": "14.2 miles"
+        "distance": "14.2 miles",
+        "swipedRight": false,
+        "isMatch": false
     ],
     [
         "name": "Kevin",
@@ -142,7 +170,9 @@ var users: [[String:Any]] = [
         "job": "Systems Engineer at Votizen",
         "education": "Oregon State University, 2011",
         "location": "San Francisco",
-        "distance": "15.1 miles"
+        "distance": "15.1 miles",
+        "swipedRight": false,
+        "isMatch": false
     ],
     [
         "name": "Mahdi",
@@ -151,7 +181,9 @@ var users: [[String:Any]] = [
         "job": "Marketing Manager at Respondly",
         "education": "North Carolina State, 2011",
         "location": "Palo Alto",
-        "distance": "25.6 miles"
+        "distance": "25.6 miles",
+        "swipedRight": false,
+        "isMatch": false
     ],
     [
         "name": "Marcos",
@@ -160,7 +192,9 @@ var users: [[String:Any]] = [
         "job": "Outbound Marketing",
         "education": "UC Davis, 2008",
         "location": "Sunnyvale",
-        "distance": "33.1 miles"
+        "distance": "33.1 miles",
+        "swipedRight": false,
+        "isMatch": false
     ],
     [
         "name": "Mario",
