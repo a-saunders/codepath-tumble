@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<<<<<<< HEAD
-<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="qaZ-nw-CVg">
-=======
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1808" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="0Qy-Ou-NEt">
->>>>>>> master
-=======
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1808" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="0Qy-Ou-NEt">
->>>>>>> master
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -50,30 +42,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="jOB-va-NND">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="509"/>
+                                <rect key="frame" x="0.0" y="158" width="320" height="351"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="empty-message" id="wj6-On-Yda">
-                                        <rect key="frame" x="57" y="210" width="205" height="153"/>
+                                        <rect key="frame" x="57" y="52" width="205" height="153"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="sent-date" id="f3i-98-L5c">
-                                        <rect key="frame" x="10" y="68" width="299" height="78"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OuV-zG-Mho">
-                                        <rect key="frame" x="10" y="68" width="299" height="78"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <connections>
-                                            <segue destination="VgO-Cw-Yav" kind="push" id="pGe-S5-mVu"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="3fM-tc-KZ3" appends="YES" id="PsX-ZB-djm"/>
                                 </connections>
                             </scrollView>
+                            <view contentMode="scaleToFill" id="ya6-Bm-QhJ">
+                                <rect key="frame" x="0.0" y="59" width="320" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="sent-date" id="f3i-98-L5c">
+                                <rect key="frame" x="10" y="69" width="299" height="78"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OuV-zG-Mho">
+                                <rect key="frame" x="10" y="69" width="299" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="VgO-Cw-Yav" kind="push" id="pGe-S5-mVu"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" id="hHV-3e-xsy">
                                 <rect key="frame" x="0.0" y="512" width="320" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
