@@ -8,34 +8,132 @@
 
 import UIKit
 
+class UserView: UIView {
+    var userAtIndex: Int = 0
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
 class SwipeViewController: UIViewController, UIGestureRecognizerDelegate {
     
-    @IBOutlet weak var cardView: UIView!
     @IBOutlet var cardPanRecognizer: UIPanGestureRecognizer!
-    @IBOutlet weak var imageView: UIScrollView!
+    @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var scrollView: UIScrollView!
-    
+
+    var cardToPan: UserView!
+    var cardToPanCenter: CGPoint!
+    @IBOutlet weak var backgroundView: UIView!
+    var rotationFactor = 0
+
+    var cardPanGestureRecognizer: UIPanGestureRecognizer!
     var cardInitialCenter: CGPoint!
-    
-    @IBOutlet var panGestureRecognizer: UIPanGestureRecognizer!
-    
+    var currentPotentialMatch = users[5]
+    var imageName: String!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+/*
         scrollView.contentSize = CGSize(width: 288, height: 2000)
-        
+
+        // Set text data
+        nameAgeLabel.text = "\(currentPotentialMatch["name"]!), \(currentPotentialMatch["age"]!)"
+        occupationLabel.text = "\(currentPotentialMatch["job"]!)"
+        educationLabel.text = "\(currentPotentialMatch["education"]!)"
+        imageName = "\(currentPotentialMatch["name"]!)"
+        profileImage.image = UIImage(named: "\(imageName.lowercaseString)-128x128")
+
         cardView.layer.borderWidth = 1
         cardView.layer.borderColor = UIColor(red: 225/255, green: 225/255, blue: 225/255, alpha: 1).CGColor
-        cardView.layer.cornerRadius = 4;
+        cardView.layer.cornerRadius = 8;
         cardView.layer.masksToBounds = true;
-        
+        cardView.layer.shadowColor = UIColor.blackColor().CGColor
+        cardView.layer.shadowOpacity = 1
+        cardView.layer.shadowOffset = CGSizeZero
+        cardView.layer.shadowRadius = 10
+
         scrollView.layer.cornerRadius = 2;
-        
+
         panGestureRecognizer.delegate = self
-        
+
         // Do any additional setup after loading the view.
+        // Just create all the cards here, and let swiping
+        // revel the cards lower in the stack
+        for user in users {
+            print("\(user)")
+        }
+ */
+        cardToPanCenter = backgroundView.center
+
+        var i = 0
+        for user in users {
+            cardPanGestureRecognizer = UIPanGestureRecognizer(target: self, action: "didPanCard:")
+            cardPanGestureRecognizer.delegate = self
+            let userCard = createCard(user, userAtIndex: i)
+            userCard.addGestureRecognizer(cardPanGestureRecognizer)
+            view.addSubview(userCard)
+            i++
+        }
     }
-    
+
+    func createCard(user: Dictionary<String, protocol<>>, userAtIndex: Int) -> UserView {
+        // Create parent card view
+        let userCardView = UserView()
+        userCardView.frame = CGRectMake(10, 65, 300, 480)
+        userCardView.backgroundColor = UIColor.whiteColor()
+        userCardView.layer.cornerRadius = 10
+        userCardView.layer.borderColor = UIColor.lightGrayColor().CGColor;
+        userCardView.layer.borderWidth = 1;
+
+        // Add image
+        let profileImageView: UIImageView = UIImageView()
+        profileImageView.frame = CGRectMake(10, 10, 280, 380)
+        profileImageView.contentMode = .ScaleAspectFit
+
+        let imageName = "\(user["name"]!)"
+        profileImageView.image = UIImage(named: "\(imageName.lowercaseString)-128x128")
+        userCardView.addSubview(profileImageView)
+
+        // Create Name, Age label
+        let nameAgeLabel: UILabel = UILabel()
+        nameAgeLabel.frame = CGRectMake(20, 400, 260, 22)
+        nameAgeLabel.backgroundColor = UIColor.whiteColor()
+        nameAgeLabel.textColor = UIColor.blackColor()
+        nameAgeLabel.textAlignment = NSTextAlignment.Left
+        nameAgeLabel.font = nameAgeLabel.font.fontWithSize(22)
+        nameAgeLabel.text = "\(user["name"]!), \(user["age"]!)"
+        userCardView.addSubview(nameAgeLabel)
+        
+        // Create Occupation label
+        let occupationLabel: UILabel = UILabel()
+        occupationLabel.frame = CGRectMake(20, 430, 260, 14)
+        occupationLabel.backgroundColor = UIColor.whiteColor()
+        occupationLabel.textColor = UIColor.lightGrayColor()
+        occupationLabel.textAlignment = NSTextAlignment.Left
+        occupationLabel.font = occupationLabel.font.fontWithSize(12)
+        occupationLabel.text = "\(user["job"]!)"
+        userCardView.addSubview(occupationLabel)
+
+        // Create Education label
+        let educationLabel: UILabel = UILabel()
+        educationLabel.frame = CGRectMake(20, 444, 260, 14)
+        educationLabel.backgroundColor = UIColor.whiteColor()
+        educationLabel.textColor = UIColor.lightGrayColor()
+        educationLabel.textAlignment = NSTextAlignment.Left
+        educationLabel.font = educationLabel.font.fontWithSize(12)
+        educationLabel.text = "\(user["education"]!)"
+        userCardView.addSubview(educationLabel)
+
+        // Embed data so we can update the users array
+        userCardView.userAtIndex = userAtIndex
+        return userCardView
+    }
+
     func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldBeRequiredToFailByGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
     }
@@ -55,88 +153,76 @@ class SwipeViewController: UIViewController, UIGestureRecognizerDelegate {
             return false
         }
     }
-    
+
+    @IBAction func didPanCard(sender: UIPanGestureRecognizer) {
+        let point = sender.locationInView(view)
+        let translation = sender.translationInView(view)
+
+        if sender.state == UIGestureRecognizerState.Began {
+            cardToPan = sender.view as! UserView
+            if (point.y > cardToPanCenter.y) {
+                rotationFactor = -1;
+            } else {
+                rotationFactor = 1;
+            }
+        } else if sender.state == UIGestureRecognizerState.Changed {
+            cardToPan.center = CGPoint(x: cardToPanCenter.x + translation.x, y: cardToPanCenter.y)
+            cardToPan.transform = CGAffineTransformMakeRotation(CGFloat(Double(translation.x * 0.15) * Double(rotationFactor) * M_PI / 180))
+        } else if sender.state == UIGestureRecognizerState.Ended {
+            // If it didn't move enough to trigger a dismissal, return to original position
+            if (abs(translation.x) < 50) {
+                UIView.animateWithDuration(
+                    0.25,
+                    animations: {
+                        self.cardToPan.transform = CGAffineTransformIdentity
+                        self.cardToPan.center = self.cardToPanCenter
+                    }
+                )
+            // If it's a swipe right, move it off stage right
+            } else if (translation.x > 50) {
+                users[cardToPan.userAtIndex]["swipedRight"] = true
+                UIView.animateWithDuration(
+                    0.5,
+                    delay: 0,
+                    usingSpringWithDamping: 1,
+                    initialSpringVelocity: 1,
+                    options: [],
+                    animations: {
+                        self.cardToPan.center = CGPoint(x: self.cardToPan.center.x + self.view.frame.size.width, y: self.cardToPanCenter.y)
+                    },
+                    completion: nil
+                )
+            // If it's a swipe left, move it off stage left
+            } else {
+                UIView.animateWithDuration(
+                    0.5,
+                    delay: 0,
+                    usingSpringWithDamping: 1,
+                    initialSpringVelocity: 1,
+                    options: [],
+                    animations: {
+                        self.cardToPan.center = CGPoint(x: self.cardToPan.center.x - self.view.frame.size.width, y: self.cardToPanCenter.y)
+                    },
+                    completion: nil
+                )
+            }
+/*
+            let matches = users.filter({ dict in
+                if let swipedRight = (dict["swipedRight"] as? Bool) {
+                    return swipedRight
+                }
+                return false
+            })
+            print("\(matches)")
+ */
+        }
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    @IBAction func didPanCard(sender: UIPanGestureRecognizer) {
-        
-        
-        // Absolute (x,y) coordinates in card view
-        
-        var point = cardPanRecognizer.locationInView(view)
-        
-        // Relative change in (x,y) coordinates from where gesture began.
-        var translation = cardPanRecognizer.translationInView(view)
-        var velocity = cardPanRecognizer.velocityInView(view)
-        
-        
-        if sender.state == UIGestureRecognizerState.Began {
-            
-            
-            cardInitialCenter = cardView.center
-            
-            
-        } else if sender.state == UIGestureRecognizerState.Changed {
-            
-            // If pan input x value changes, move Message View
-            cardView.center.x = cardInitialCenter.x + translation.x
-            cardView.center.y = cardInitialCenter.y + translation.y
-            
-            //If card is swiped to the right and above image center
-            if translation.x > 0 && (point.y) < cardInitialCenter.y {
-                UIView.animateWithDuration(0.2, animations: {
-                    self.cardView.transform = CGAffineTransformMakeRotation(translation.x * 11.25 / 160 * CGFloat(M_PI / 180))
-                })
-                
-                //If card is swiped to the right and below image center
-            } else if translation.x > 0 && (point.y) > cardInitialCenter.y {
-                UIView.animateWithDuration(0.2, animations: {
-                    self.cardView.transform = CGAffineTransformMakeRotation(translation.x * -11.25 / 160 * CGFloat(M_PI / 180))
-                })
-                
-                //If card is swiped to the left and above image center
-            } else if translation.x < 0 && (point.y) < cardInitialCenter.y {
-                UIView.animateWithDuration(0.2, animations: {
-                    self.cardView.transform = CGAffineTransformMakeRotation(translation.x * 11.25 / 160 * CGFloat(M_PI / 180))
-                })
-                
-                //If card is swiped to the left and below image center
-            } else if translation.x < 0 && (point.y) > cardInitialCenter.y {
-                UIView.animateWithDuration(0.2, animations: {
-                    self.cardView.transform = CGAffineTransformMakeRotation(translation.x * -11.25 / 160 * CGFloat(M_PI / 180))
-                })
-            }
-            
-        } else if sender.state == UIGestureRecognizerState.Ended {
-            
-            // move messageImage back to original point
-            
-            if (abs(translation.x) <= 100) {
-                UIView.animateWithDuration(0.4, animations: {
-                    self.cardView.center.x = self.cardInitialCenter.x
-                    self.cardView.center.y = self.cardInitialCenter.y
-                    self.cardView.transform = CGAffineTransformIdentity
-                })
-                
-            } else if translation.x > 100 {
-                UIView.animateWithDuration(0.4, animations: {
-                    self.cardView.transform = CGAffineTransformMakeTranslation(250,0)
-                })
-                
-            }
-                
-            else if translation.x < 100 {
-                UIView.animateWithDuration(0.4, animations: {
-                    self.cardView.transform = CGAffineTransformMakeTranslation(-250,0)
-                })
-            }
-        }
-    }
-    
-    
+
     /*
     // MARK: - Navigation
     
