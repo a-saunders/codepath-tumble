@@ -8,14 +8,28 @@
 
 import UIKit
 
+class UserView: UIView {
+    var userAtIndex: Int = 0
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
 class SwipeViewController: UIViewController, UIGestureRecognizerDelegate {
     
     @IBOutlet var cardPanRecognizer: UIPanGestureRecognizer!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var scrollView: UIScrollView!
 
-    var cardToPan: UIView!
+    var cardToPan: UserView!
     var cardToPanCenter: CGPoint!
+    @IBOutlet weak var backgroundView: UIView!
+    var rotationFactor = 0
 
     var cardPanGestureRecognizer: UIPanGestureRecognizer!
     var cardInitialCenter: CGPoint!
@@ -54,19 +68,22 @@ class SwipeViewController: UIViewController, UIGestureRecognizerDelegate {
             print("\(user)")
         }
  */
+        cardToPanCenter = backgroundView.center
 
+        var i = 0
         for user in users {
             cardPanGestureRecognizer = UIPanGestureRecognizer(target: self, action: "didPanCard:")
             cardPanGestureRecognizer.delegate = self
-            let userCard = createCard(user)
+            let userCard = createCard(user, userAtIndex: i)
             userCard.addGestureRecognizer(cardPanGestureRecognizer)
             view.addSubview(userCard)
+            i++
         }
     }
 
-    func createCard(user: Dictionary<String, protocol<>>) -> UIView {
+    func createCard(user: Dictionary<String, protocol<>>, userAtIndex: Int) -> UserView {
         // Create parent card view
-        let userCardView = UIView()
+        let userCardView = UserView()
         userCardView.frame = CGRectMake(10, 65, 300, 480)
         userCardView.backgroundColor = UIColor.whiteColor()
         userCardView.layer.cornerRadius = 10
@@ -112,6 +129,8 @@ class SwipeViewController: UIViewController, UIGestureRecognizerDelegate {
         educationLabel.text = "\(user["education"]!)"
         userCardView.addSubview(educationLabel)
 
+        // Embed data so we can update the users array
+        userCardView.userAtIndex = userAtIndex
         return userCardView
     }
 
@@ -136,72 +155,66 @@ class SwipeViewController: UIViewController, UIGestureRecognizerDelegate {
     }
 
     @IBAction func didPanCard(sender: UIPanGestureRecognizer) {
-
-        // Absolute (x,y) coordinates in card view
-        let point = cardPanGestureRecognizer.locationInView(view)
-
-        // Relative change in (x,y) coordinates from where gesture began.
-        let translation = cardPanGestureRecognizer.translationInView(view)
-        let velocity = cardPanGestureRecognizer.velocityInView(view)
+        let point = sender.locationInView(view)
+        let translation = sender.translationInView(view)
 
         if sender.state == UIGestureRecognizerState.Began {
-
-            cardToPan = sender.view
-            cardToPanCenter = cardToPan.center
-
+            cardToPan = sender.view as! UserView
+            if (point.y > cardToPanCenter.y) {
+                rotationFactor = -1;
+            } else {
+                rotationFactor = 1;
+            }
         } else if sender.state == UIGestureRecognizerState.Changed {
-
-            // If pan input x value changes, move Message View
-            cardToPan.center.x = cardToPanCenter.x + translation.x
-            cardToPan.center.y = cardToPanCenter.y + translation.y
-            
-            //If card is swiped to the right and above image center
-            if translation.x > 0 && (point.y) < cardToPanCenter.y {
-                UIView.animateWithDuration(0.2, animations: {
-                    self.cardToPan.transform = CGAffineTransformMakeRotation(translation.x * 11.25 / 160 * CGFloat(M_PI / 180))
-                })
-                
-                //If card is swiped to the right and below image center
-            } else if translation.x > 0 && (point.y) > cardToPanCenter.y {
-                UIView.animateWithDuration(0.2, animations: {
-                    self.cardToPan.transform = CGAffineTransformMakeRotation(translation.x * -11.25 / 160 * CGFloat(M_PI / 180))
-                })
-                
-                //If card is swiped to the left and above image center
-            } else if translation.x < 0 && (point.y) < cardToPanCenter.y {
-                UIView.animateWithDuration(0.2, animations: {
-                    self.cardToPan.transform = CGAffineTransformMakeRotation(translation.x * 11.25 / 160 * CGFloat(M_PI / 180))
-                })
-                
-                //If card is swiped to the left and below image center
-            } else if translation.x < 0 && (point.y) > cardToPanCenter.y {
-                UIView.animateWithDuration(0.2, animations: {
-                    self.cardToPan.transform = CGAffineTransformMakeRotation(translation.x * -11.25 / 160 * CGFloat(M_PI / 180))
-                })
-            }
-            
+            cardToPan.center = CGPoint(x: cardToPanCenter.x + translation.x, y: cardToPanCenter.y)
+            cardToPan.transform = CGAffineTransformMakeRotation(CGFloat(Double(translation.x * 0.15) * Double(rotationFactor) * M_PI / 180))
         } else if sender.state == UIGestureRecognizerState.Ended {
-            
-            // move messageImage back to original point
-            if (abs(translation.x) <= 100) {
-                UIView.animateWithDuration(0.4, animations: {
-                    self.cardToPan.center.x = self.cardToPanCenter.x
-                    self.cardToPan.center.y = self.cardToPanCenter.y
-                    self.cardToPan.transform = CGAffineTransformIdentity
-                })
-                
-            } else if translation.x > 100 {
-                UIView.animateWithDuration(0.4, animations: {
-                    self.cardToPan.transform = CGAffineTransformMakeTranslation(250,0)
-                })
-                
+            // If it didn't move enough to trigger a dismissal, return to original position
+            if (abs(translation.x) < 50) {
+                UIView.animateWithDuration(
+                    0.25,
+                    animations: {
+                        self.cardToPan.transform = CGAffineTransformIdentity
+                        self.cardToPan.center = self.cardToPanCenter
+                    }
+                )
+            // If it's a swipe right, move it off stage right
+            } else if (translation.x > 50) {
+                users[cardToPan.userAtIndex]["swipedRight"] = true
+                UIView.animateWithDuration(
+                    0.5,
+                    delay: 0,
+                    usingSpringWithDamping: 1,
+                    initialSpringVelocity: 1,
+                    options: [],
+                    animations: {
+                        self.cardToPan.center = CGPoint(x: self.cardToPan.center.x + self.view.frame.size.width, y: self.cardToPanCenter.y)
+                    },
+                    completion: nil
+                )
+            // If it's a swipe left, move it off stage left
+            } else {
+                UIView.animateWithDuration(
+                    0.5,
+                    delay: 0,
+                    usingSpringWithDamping: 1,
+                    initialSpringVelocity: 1,
+                    options: [],
+                    animations: {
+                        self.cardToPan.center = CGPoint(x: self.cardToPan.center.x - self.view.frame.size.width, y: self.cardToPanCenter.y)
+                    },
+                    completion: nil
+                )
             }
-                
-            else if translation.x < 100 {
-                UIView.animateWithDuration(0.4, animations: {
-                    self.cardToPan.transform = CGAffineTransformMakeTranslation(-250,0)
-                })
-            }
+/*
+            let matches = users.filter({ dict in
+                if let swipedRight = (dict["swipedRight"] as? Bool) {
+                    return swipedRight
+                }
+                return false
+            })
+            print("\(matches)")
+ */
         }
     }
 
