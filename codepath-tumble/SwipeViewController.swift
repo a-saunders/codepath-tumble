@@ -38,36 +38,7 @@ class SwipeViewController: UIViewController, UIGestureRecognizerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-/*
-        scrollView.contentSize = CGSize(width: 288, height: 2000)
 
-        // Set text data
-        nameAgeLabel.text = "\(currentPotentialMatch["name"]!), \(currentPotentialMatch["age"]!)"
-        occupationLabel.text = "\(currentPotentialMatch["job"]!)"
-        educationLabel.text = "\(currentPotentialMatch["education"]!)"
-        imageName = "\(currentPotentialMatch["name"]!)"
-        profileImage.image = UIImage(named: "\(imageName.lowercaseString)-128x128")
-
-        cardView.layer.borderWidth = 1
-        cardView.layer.borderColor = UIColor(red: 225/255, green: 225/255, blue: 225/255, alpha: 1).CGColor
-        cardView.layer.cornerRadius = 8;
-        cardView.layer.masksToBounds = true;
-        cardView.layer.shadowColor = UIColor.blackColor().CGColor
-        cardView.layer.shadowOpacity = 1
-        cardView.layer.shadowOffset = CGSizeZero
-        cardView.layer.shadowRadius = 10
-
-        scrollView.layer.cornerRadius = 2;
-
-        panGestureRecognizer.delegate = self
-
-        // Do any additional setup after loading the view.
-        // Just create all the cards here, and let swiping
-        // revel the cards lower in the stack
-        for user in users {
-            print("\(user)")
-        }
- */
         cardToPanCenter = backgroundView.center
 
         var i = 0
