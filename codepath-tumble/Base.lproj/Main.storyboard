@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1808" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="qaZ-nw-CVg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1808" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="0Qy-Ou-NEt">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -128,20 +128,213 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Match Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uX1-f2-dW2">
-                                <rect key="frame" x="109" y="205" width="102" height="21"/>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" id="V9f-8b-hSy">
+                                <rect key="frame" x="9" y="62" width="303" height="496"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="hipster-1-thumb" id="X5N-T3-ZmF">
+                                        <rect key="frame" x="8" y="8" width="93" height="78"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="4TU-uH-5RR" appends="YES" id="csm-tY-eAZ"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="hipster-2-thumb" id="qJG-7N-fRl">
+                                        <rect key="frame" x="105" y="8" width="93" height="78"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="y3N-6w-ldn" appends="YES" id="60s-V8-1X7"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="hipster-3-thumb" id="5FC-B8-sXP">
+                                        <rect key="frame" x="202" y="8" width="93" height="78"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="Ile-LE-7DN" appends="YES" id="bcI-34-swP"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="hipster-4-thumb" id="Adh-rc-OHG">
+                                        <rect key="frame" x="8" y="89" width="93" height="78"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="7Pi-5U-rDw" appends="YES" id="MPc-Gq-Lya"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="hipster-5-thumb" id="m62-Up-y1P">
+                                        <rect key="frame" x="105" y="89" width="93" height="78"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="Clm-m2-JTs" appends="YES" id="8fN-LZ-gNs"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="hipster-6-thumb" id="0kY-98-K2Y">
+                                        <rect key="frame" x="202" y="89" width="93" height="78"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="xfa-Cx-PGo" appends="YES" id="i42-I8-JeN"/>
+                                        </connections>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ben,30" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YpE-zk-RCS">
+                                        <rect key="frame" x="18" y="183" width="175" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="University of Southern CA, 2010" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ntc-vA-qIa">
+                                        <rect key="frame" x="18" y="208" width="277" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="large-dot" id="ZIp-1H-4ZN">
+                                        <rect key="frame" x="18" y="252" width="13" height="13"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CnA-pQ-T5Y">
+                                        <rect key="frame" x="39" y="329" width="226" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="large-dot" id="e4l-mo-MgS">
+                                        <rect key="frame" x="18" y="337" width="13" height="13"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Rey-BS-8Ms">
+                                        <rect key="frame" x="39" y="244" width="226" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="San Francisco" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7fO-1M-vyd">
+                                        <rect key="frame" x="39" y="264" width="226" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.4 miles" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jmC-tj-vOE">
+                                        <rect key="frame" x="39" y="284" width="226" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hWD-Ye-PE5">
+                                        <rect key="frame" x="39" y="356" width="256" height="69"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation </string>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="M8C-cG-un7">
+                                <rect key="frame" x="268" y="24" width="37" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Done"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ben" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YZE-Rw-rqR">
+                                <rect key="frame" x="73" y="24" width="175" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="X5N-T3-ZmF" id="jMf-oA-Ebt"/>
+                        <outlet property="profileCard" destination="V9f-8b-hSy" id="FNp-wP-87l"/>
+                        <segue destination="vEe-rM-htJ" kind="modal" identifier="ImageGallerySegue" id="pwb-ko-pxg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ypv-wK-NYj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="4TU-uH-5RR">
+                    <connections>
+                        <action selector="didTapImage:" destination="0Qy-Ou-NEt" id="9hn-wn-1Ey"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="y3N-6w-ldn">
+                    <connections>
+                        <action selector="didTapImage:" destination="0Qy-Ou-NEt" id="TKh-og-3De"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Ile-LE-7DN">
+                    <connections>
+                        <action selector="didTapImage:" destination="0Qy-Ou-NEt" id="QL5-DC-eyZ"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="7Pi-5U-rDw">
+                    <connections>
+                        <action selector="didTapImage:" destination="0Qy-Ou-NEt" id="lKS-Po-WAY"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Clm-m2-JTs">
+                    <connections>
+                        <action selector="didTapImage:" destination="0Qy-Ou-NEt" id="BJ4-yq-gat"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="xfa-Cx-PGo">
+                    <connections>
+                        <action selector="didTapImage:" destination="0Qy-Ou-NEt" id="52Y-Km-13q"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1490" y="1843"/>
+        </scene>
+        <!--Image Gallery View Controller-->
+        <scene sceneID="Tts-ft-l4Q">
+            <objects>
+                <viewController storyboardIdentifier="Image Gallery" id="vEe-rM-htJ" customClass="ImageGalleryViewController" customModule="codepath_tumble" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Qm-jf-apY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="4zx-Xg-l68">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="D64-wX-nZ0">
+                                        <rect key="frame" x="0.0" y="41" width="320" height="527"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ItS-9B-mOM">
+                                        <rect key="frame" x="19" y="21" width="35" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="back-button"/>
+                                        <connections>
+                                            <action selector="dismissButton:" destination="vEe-rM-htJ" eventType="touchUpInside" id="ODD-zr-8QU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="ItS-9B-mOM" id="AOu-i2-BPN"/>
+                        <outlet property="imageLoaded" destination="D64-wX-nZ0" id="r1X-Ib-CWP"/>
+                        <outlet property="scrollView" destination="4zx-Xg-l68" id="vkl-qP-GrH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G85-2K-nqI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1490" y="2568"/>
         </scene>
         <!--New View Controller-->
         <scene sceneID="uOj-lM-7BB">
@@ -249,7 +442,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="894" y="373"/>
+            <point key="canvasLocation" x="894" y="381"/>
         </scene>
         <!--Card Image View Controller-->
         <scene sceneID="X79-dY-nK7">
@@ -468,11 +661,19 @@
         </scene>
     </scenes>
     <resources>
+        <image name="back-button" width="35" height="35"/>
         <image name="date-details" width="320" height="663"/>
         <image name="date-footer" width="320" height="62"/>
         <image name="dates" width="320" height="568"/>
         <image name="empty-message" width="205" height="153"/>
+        <image name="hipster-1-thumb" width="93" height="78"/>
+        <image name="hipster-2-thumb" width="93" height="78"/>
+        <image name="hipster-3-thumb" width="93" height="78"/>
+        <image name="hipster-4-thumb" width="93" height="78"/>
+        <image name="hipster-5-thumb" width="93" height="78"/>
+        <image name="hipster-6-thumb" width="93" height="78"/>
         <image name="imagescroll" width="612" height="2920"/>
+        <image name="large-dot" width="13" height="13"/>
         <image name="match" width="320" height="568"/>
         <image name="matches" width="320" height="622"/>
         <image name="matches_avatars" width="355" height="98"/>
