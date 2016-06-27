@@ -14,6 +14,9 @@
 		88E234EB1D1C7501009CBECF /* cardImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E234EA1D1C7501009CBECF /* cardImageViewController.swift */; };
 		9F0685F51D1B4D470008AEFA /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0685F41D1B4D470008AEFA /* NewViewController.swift */; };
 		9F5D32D61D1C847C00990153 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5D32D51D1C847C00990153 /* CalendarViewController.swift */; };
+		9F624A951D21D08E008048AC /* ChatBubbleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F624A931D21D08E008048AC /* ChatBubbleData.swift */; };
+		9F624A961D21D08E008048AC /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F624A941D21D08E008048AC /* ChatBubble.swift */; };
+		9F624A981D21D58F008048AC /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F624A971D21D58F008048AC /* Util.swift */; };
 		9F65E0E81D1B07FB00C5E29D /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F65E0E71D1B07FB00C5E29D /* UserViewController.swift */; };
 		9F65E0EA1D1B082D00C5E29D /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F65E0E91D1B082D00C5E29D /* SwipeViewController.swift */; };
 		9F65E0EC1D1B084900C5E29D /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F65E0EB1D1B084900C5E29D /* MatchesViewController.swift */; };
@@ -56,6 +59,9 @@
 		88E234EA1D1C7501009CBECF /* cardImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cardImageViewController.swift; sourceTree = "<group>"; };
 		9F0685F41D1B4D470008AEFA /* NewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		9F5D32D51D1C847C00990153 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		9F624A931D21D08E008048AC /* ChatBubbleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatBubbleData.swift; sourceTree = "<group>"; };
+		9F624A941D21D08E008048AC /* ChatBubble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
+		9F624A971D21D58F008048AC /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		9F65E0E71D1B07FB00C5E29D /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		9F65E0E91D1B082D00C5E29D /* SwipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
 		9F65E0EB1D1B084900C5E29D /* MatchesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
@@ -150,9 +156,12 @@
 				9F888B8F1D1C8852008F6BB1 /* ViewControllers */,
 				A43FC19E1D10C6A300B4C6F4 /* AppDelegate.swift */,
 				A43FC1A01D10C6A300B4C6F4 /* ViewController.swift */,
+				9F624A931D21D08E008048AC /* ChatBubbleData.swift */,
+				9F624A941D21D08E008048AC /* ChatBubble.swift */,
 				A48D687E1D1B3AEB002A05BF /* Users.swift */,
 				A43FC1A21D10C6A300B4C6F4 /* Main.storyboard */,
 				A43FC1A51D10C6A300B4C6F4 /* Assets.xcassets */,
+				9F624A971D21D58F008048AC /* Util.swift */,
 				A43FC1A71D10C6A300B4C6F4 /* LaunchScreen.storyboard */,
 				A43FC1AA1D10C6A300B4C6F4 /* Info.plist */,
 				88AF5CC61D1CB47F005D6ADB /* DateStoryboard.storyboard */,
@@ -316,13 +325,16 @@
 				88AF5CC91D1CC2EA005D6ADB /* ImageGalleryViewController.swift in Sources */,
 				88AF5CCB1D1CC634005D6ADB /* FadeTransition.swift in Sources */,
 				9F65E0EE1D1B086400C5E29D /* MessagesViewController.swift in Sources */,
+				9F624A951D21D08E008048AC /* ChatBubbleData.swift in Sources */,
 				9F65E0F21D1B08AE00C5E29D /* StartViewController.swift in Sources */,
 				A43FC1A11D10C6A300B4C6F4 /* ViewController.swift in Sources */,
 				88AF5CCD1D1D9CEE005D6ADB /* BaseTransition.swift in Sources */,
+				9F624A961D21D08E008048AC /* ChatBubble.swift in Sources */,
 				9F65E0F01D1B089600C5E29D /* DateViewController.swift in Sources */,
 				9F65E0E81D1B07FB00C5E29D /* UserViewController.swift in Sources */,
 				9F65E0EC1D1B084900C5E29D /* MatchesViewController.swift in Sources */,
 				9F65E0F41D1B08CD00C5E29D /* ProfileViewController.swift in Sources */,
+				9F624A981D21D58F008048AC /* Util.swift in Sources */,
 				9F0685F51D1B4D470008AEFA /* NewViewController.swift in Sources */,
 				9F5D32D61D1C847C00990153 /* CalendarViewController.swift in Sources */,
 				88E234EB1D1C7501009CBECF /* cardImageViewController.swift in Sources */,
