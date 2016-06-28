@@ -18,7 +18,9 @@ var users: [[String:Any]] = [
         "location": "San Mateo",
         "distance": "1.4 miles",
         "swipedRight": false,
-        "isMatch": false
+        "matchSwipedRight": false,
+        "isMatch": false,
+        "messages": []
     ],
     [
         "name": "Bram",
@@ -29,7 +31,9 @@ var users: [[String:Any]] = [
         "location": "San Francisco",
         "distance": "13.2 miles",
         "swipedRight": false,
-        "isMatch": false
+        "matchSwipedRight": false,
+        "isMatch": false,
+        "messages": []
     ],
     [
         "name": "Cale",
@@ -40,7 +44,9 @@ var users: [[String:Any]] = [
         "location": "Palo Alto",
         "distance": "26.2 miles",
         "swipedRight": false,
-        "isMatch": false
+        "matchSwipedRight": false,
+        "isMatch": false,
+        "messages": []
     ],
     [
         "name": "Chandler",
@@ -51,7 +57,9 @@ var users: [[String:Any]] = [
         "location": "San Francisco",
         "distance": "14.6 miles",
         "swipedRight": false,
-        "isMatch": false
+        "matchSwipedRight": false,
+        "isMatch": false,
+        "messages": []
     ],
     [
         "name": "Chris",
@@ -62,7 +70,9 @@ var users: [[String:Any]] = [
         "location": "San Francisco",
         "distance": "13.3 miles",
         "swipedRight": false,
-        "isMatch": false
+        "matchSwipedRight": false,
+        "isMatch": false,
+        "messages": []
     ],
     [
         "name": "Christophe",
@@ -73,7 +83,9 @@ var users: [[String:Any]] = [
         "location": "San Francisco",
         "distance": "13.6 miles",
         "swipedRight": false,
-        "isMatch": false
+        "matchSwipedRight": false,
+        "isMatch": false,
+        "messages": []
     ],
     [
         "name": "Dan",
@@ -84,7 +96,9 @@ var users: [[String:Any]] = [
         "location": "San Francisco",
         "distance": "14.3 miles",
         "swipedRight": false,
-        "isMatch": false
+        "matchSwipedRight": false,
+        "isMatch": false,
+        "messages": []
     ],
     [
         "name": "Daniel",
@@ -95,7 +109,9 @@ var users: [[String:Any]] = [
         "location": "Burlingame",
         "distance": "7.7 miles",
         "swipedRight": false,
-        "isMatch": false
+        "matchSwipedRight": false,
+        "isMatch": false,
+        "messages": []
     ],
     [
         "name": "Felipe",
@@ -106,7 +122,9 @@ var users: [[String:Any]] = [
         "location": "San Francisco",
         "distance": "12.1 miles",
         "swipedRight": false,
-        "isMatch": false
+        "matchSwipedRight": false,
+        "isMatch": false,
+        "messages": []
     ],
     [
         "name": "Himan",
@@ -117,7 +135,9 @@ var users: [[String:Any]] = [
         "location": "Millbrae",
         "distance": "4.8 miles",
         "swipedRight": false,
-        "isMatch": false
+        "matchSwipedRight": false,
+        "isMatch": false,
+        "messages": []
     ],
     [
         "name": "James",
@@ -128,7 +148,9 @@ var users: [[String:Any]] = [
         "location": "Daly City",
         "distance": "5.8 miles",
         "swipedRight": false,
-        "isMatch": false
+        "matchSwipedRight": false,
+        "isMatch": false,
+        "messages": []
     ],
     [
         "name": "John",
@@ -139,7 +161,9 @@ var users: [[String:Any]] = [
         "location": "",
         "distance": "",
         "swipedRight": false,
-        "isMatch": false
+        "matchSwipedRight": false,
+        "isMatch": false,
+        "messages": []
     ],
     [
         "name": "Junaid",
@@ -150,7 +174,9 @@ var users: [[String:Any]] = [
         "location": "San Francisco",
         "distance": "13.1 miles",
         "swipedRight": false,
-        "isMatch": false
+        "matchSwipedRight": false,
+        "isMatch": false,
+        "messages": []
     ],
     [
         "name": "Justin",
@@ -161,7 +187,9 @@ var users: [[String:Any]] = [
         "location": "San Francisco",
         "distance": "14.2 miles",
         "swipedRight": false,
-        "isMatch": false
+        "matchSwipedRight": false,
+        "isMatch": false,
+        "messages": []
     ],
     [
         "name": "Kevin",
@@ -172,7 +200,9 @@ var users: [[String:Any]] = [
         "location": "San Francisco",
         "distance": "15.1 miles",
         "swipedRight": false,
-        "isMatch": false
+        "matchSwipedRight": false,
+        "isMatch": false,
+        "messages": []
     ],
     [
         "name": "Mahdi",
@@ -183,7 +213,9 @@ var users: [[String:Any]] = [
         "location": "Palo Alto",
         "distance": "25.6 miles",
         "swipedRight": false,
-        "isMatch": false
+        "matchSwipedRight": false,
+        "isMatch": false,
+        "messages": []
     ],
     [
         "name": "Marcos",
@@ -194,7 +226,9 @@ var users: [[String:Any]] = [
         "location": "Sunnyvale",
         "distance": "33.1 miles",
         "swipedRight": false,
-        "isMatch": false
+        "matchSwipedRight": false,
+        "isMatch": false,
+        "messages": []
     ],
     [
         "name": "Mario",
