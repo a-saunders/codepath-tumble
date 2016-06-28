@@ -31,7 +31,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Ih-06-S7u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="90" y="373"/>
+            <point key="canvasLocation" x="29" y="380"/>
         </scene>
         <!--Messages View Controller-->
         <scene sceneID="IvX-Ed-0Rb">
@@ -129,7 +129,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1769" y="373"/>
+            <point key="canvasLocation" x="1769" y="380"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="YUc-Pl-Scf">
@@ -469,7 +469,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rJm-R1-unC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="894" y="1829.9999999999998"/>
+            <point key="canvasLocation" x="894" y="1842"/>
         </scene>
         <!--Matches View Controller-->
         <scene sceneID="Az7-fF-QKt">
@@ -535,7 +535,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2wV-GA-JKX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1378" y="373"/>
+            <point key="canvasLocation" x="1378" y="380"/>
         </scene>
         <!--Calendar View Controller-->
         <scene sceneID="z9G-uj-Qk8">
@@ -563,7 +563,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SB1-lZ-p52" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1769" y="1042"/>
+            <point key="canvasLocation" x="1769" y="1126"/>
         </scene>
         <!--Date View Controller-->
         <scene sceneID="7og-ou-hXY">
@@ -622,7 +622,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Um-5A-jBT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2192" y="373"/>
+            <point key="canvasLocation" x="2185" y="380"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dWQ-BZ-ZPU">
@@ -640,7 +640,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cyn-xP-rqU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="489" y="373"/>
+            <point key="canvasLocation" x="486" y="380"/>
         </scene>
     </scenes>
     <resources>
